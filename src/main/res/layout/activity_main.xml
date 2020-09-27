@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/label_agent"
+                android:text="Add Rooms"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorHead"
+                android:gravity="center_horizontal" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/colorView"
+            android:id="@+id/view1"/>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+            android:padding="20dp"
+        android:columnCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_rno"
+            android:text="Room No:"
+            android:textSize="15dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ed_rno"
+            android:hint="Room No."
+            android:layout_marginLeft="120dp"
+            android:singleLine="true"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_deposite"
+            android:text="Deposite:"
+            android:textSize="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/ed_rno"
+            />
+
+            <EditText
+                android:id="@+id/ed_deposit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:hint="Deposite"
+                android:layout_below="@id/ed_rno"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="120dp"
+                android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_maintain"
+                        android:text="Maintenance:"
+                        android:textSize="15dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_below="@id/ed_deposit"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ed_maintain"
+                        android:hint="Maintenace"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/ed_deposit"
+                        android:layout_marginLeft="120dp"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_rent"
+                        android:text="Rent:"
+                        android:textSize="15dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_below="@id/ed_maintain"
+                        />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ed_rent"
+                        android:hint="Rent"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/ed_maintain"
+                        android:layout_marginLeft="120dp"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/btn_save"
+                        android:text="Save"
+                        android:layout_below="@id/ed_rent"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/btn_clr"
+                        android:text="CLEAR"
+                        android:layout_below="@id/ed_rent"
+                        android:layout_toRightOf="@id/btn_save"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/btn_Book"
+                        android:text="BOOK"
+                        android:onClick="Booking"
+                        android:layout_below="@id/ed_rent"
+                        android:layout_toRightOf="@id/btn_clr"
+                        />
+
+            <Button
+                android:id="@+id/btn_select"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_below="@id/btn_save"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Select Room"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btn_showAll"
+                android:text="SHOW ALL"
+                android:layout_below="@id/btn_save"
+                android:layout_toRightOf="@id/btn_select"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btn_pay"
+                android:text="PAYMENT"
+                android:layout_below="@id/btn_select"
+                android:layout_marginLeft="50dp"
+                android:onClick="Pay"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btn_exit"
+                android:text="EXIT"
+                android:layout_below="@id/btn_showAll"
+                android:layout_toRightOf="@id/btn_pay"
+                />
+
+
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

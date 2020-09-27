@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorGrid">#FFE7CB</color>
+    <color name="colorScroll">#EAFFD3</color>
+    <color name="colorPrimaryDark">#3B661C</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorHead">#00C530</color>
+    <color name="colorView">#031A00</color>
+    <color name="bg">#EAFFD3</color>
+    <color name="PayTxt">#102B00</color>
+    <color name="Roomtext">#000000</color>
+    <color name="searchFont">#C70000</color>
+</resources>

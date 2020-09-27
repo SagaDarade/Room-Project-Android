@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Room.DisplayRoom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/label_agent"
+                android:text="Room Booking"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorHead"
+                android:gravity="center_horizontal" />
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorView"
+        android:layout_below="@id/label_agent"
+        android:id="@+id/view1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:id="@+id/scroll1"
+            android:background="#602B608A"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_room"
+                    android:text="Select Room"
+                    android:textSize="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/b_load"
+                    android:layout_toRightOf="@id/tv_room"
+                    android:layout_marginLeft="10dp"
+                    android:text="O)"
+                    />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/spin"
+                    android:layout_marginLeft="150dp"
+                    android:entries="@string/itemSpin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_rno"
+                    android:text="Room No"
+                    android:textSize="15dp"
+                    android:layout_below="@id/tv_room"
+                    android:layout_marginTop="25dp"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_rno"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:textColor="@color/Roomtext"
+                    android:layout_below="@+id/spin"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_deposite"
+                    android:text="Room Deposit"
+                    android:textSize="15dp"
+                    android:layout_below="@id/tv_rno"
+                    android:layout_marginTop="25dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_totDeposit"
+                    android:layout_marginLeft="150dp"
+                    android:layout_below="@id/ed_rno"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:textColor="@color/Roomtext"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_maintenance"
+                    android:text="Room Maintenance"
+                    android:textSize="15dp"
+                    android:layout_below="@id/tv_deposite"
+                    android:layout_marginTop="30dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_totMainten"
+                    android:layout_marginLeft="150dp"
+                    android:layout_below="@id/ed_totDeposit"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:textColor="@color/Roomtext"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_rent"
+                    android:text="Room Rent"
+                    android:textSize="15dp"
+                    android:layout_below="@id/tv_maintenance"
+                    android:layout_marginTop="30dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_totRent"
+                    android:layout_marginLeft="150dp"
+                    android:layout_below="@id/ed_totMainten"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:textColor="@color/Roomtext"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/colorView"
+                    android:layout_below="@id/ed_totRent"
+                    android:id="@+id/view2"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_name"
+                    android:hint="Name"
+                    android:layout_below="@id/view2"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_addrs"
+                    android:hint="Address"
+                    android:layout_below="@id/ed_name"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_birth"
+                    android:hint="Birth Date"
+                    android:inputType="date"
+                    android:layout_below="@id/ed_addrs"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_contact"
+                    android:hint="Contact"
+                    android:layout_below="@id/ed_birth"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_contact2"
+                    android:hint="Alternative Contact"
+                    android:layout_below="@id/ed_contact"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_email"
+                    android:hint="Email ID"
+                    android:layout_below="@id/ed_contact2"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_adhaarCard"
+                    android:hint="Adhaar Card No."
+                    android:layout_below="@id/ed_email"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    android:maxLength="12"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_PANCard"
+                    android:hint="PAN Card No."
+                    android:layout_below="@id/ed_adhaarCard"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    android:maxLength="12"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_initDate"
+                    android:hint="Starting From"
+                    android:layout_below="@id/ed_PANCard"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="date"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_endDate"
+                    android:hint="To Date"
+                    android:layout_below="@id/ed_initDate"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="date"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_mtrReading"
+                   android:hint="Meter Reading"
+                    android:layout_below="@id/ed_endDate"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_meter"
+                    android:drawablePadding="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/btn_save"
+                android:layout_weight="1"
+                android:text="SAVE"
+                android:onClick="custSave"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/btn_show"
+                android:layout_weight="1"
+                android:text="SHOW ALL"
+                android:onClick="allCustomer"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/btn_clear"
+                android:layout_weight="1"
+                android:text="CLEAR"
+                android:onClick="onClear"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Room.RoomUpdate"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10sp"
+    android:id="@+id/LinrLayout">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btn_update"
+        android:text="UPDATE"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btn_delete"
+        android:text="DELETE"
+        />
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_rno"
+        android:text="Room No"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_rno"
+        android:layout_marginLeft="150dp"
+        android:enabled="false"
+        android:textColor="@color/Roomtext"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_deposite"
+        android:text="Room Deposit"
+        android:textSize="15dp"
+        android:layout_below="@id/tv_rno"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_totDeposit"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@id/ed_rno"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/Roomtext"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_maintenance"
+        android:text="Room Maintenance"
+        android:textSize="15dp"
+        android:layout_below="@id/tv_deposite"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_totMainten"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@id/ed_totDeposit"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/Roomtext"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_rent"
+        android:text="Room Rent"
+        android:textSize="15dp"
+        android:layout_below="@id/tv_maintenance"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_totRent"
+        android:layout_marginLeft="150dp"
+        android:layout_below="@id/ed_totMainten"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/Roomtext"
+        android:singleLine="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorView"
+        android:layout_below="@id/ed_totRent"
+        android:id="@+id/view2"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        android:id="@+id/LinLayout">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_upd"
+            android:text="UPDATE"
+            android:onClick="onUpdate"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_del"
+            android:text="DELETE"
+            android:onClick="onDelete"
+            />
+
+    </LinearLayout>
+</LinearLayout>

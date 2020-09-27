@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Customer.UpdateCustomer">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/label_agent"
+            android:text="Customer Updation"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorHead"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/colorView"
+        android:layout_below="@id/label_agent"
+        android:id="@+id/view1"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:id="@+id/scroll1"
+            android:background="#602B608A"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_rno"
+                    android:text="Room No"
+                    android:textSize="15dp"
+                    android:layout_marginTop="25dp"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_rno"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="5dp"
+                    android:enabled="false"
+                    android:textColor="@color/Roomtext"
+                    android:layout_below="@+id/spin"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@color/colorView"
+                    android:layout_below="@id/ed_rno"
+                    android:id="@+id/view2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cName"
+                    android:text="Name"
+                    android:textSize="18dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/view2"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_name"
+                    android:hint="Name"
+                    android:layout_below="@id/tv_cName"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cAddr"
+                    android:text="Address"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_name"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_addrs"
+                    android:hint="Address"
+                    android:layout_below="@id/tv_cAddr"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cBdate"
+                    android:text="BirthDate"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_addrs"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_birth"
+                    android:hint="Birth Date"
+                    android:inputType="date"
+                    android:layout_below="@id/tv_cBdate"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cCont1"
+                    android:text="Contact 1"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_birth"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_contact"
+                    android:hint="Contact"
+                    android:layout_below="@id/tv_cCont1"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cCont2"
+                    android:text="Contact 2"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_contact"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_contact2"
+                    android:hint="Alternative Contact"
+                    android:layout_below="@id/tv_cCont2"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cEmail"
+                    android:text="Email ID"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_contact2"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_email"
+                    android:hint="Email ID"
+                    android:layout_below="@id/tv_cEmail"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cAdhar"
+                    android:text="Adhaar Number"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_email"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_adhaarCard"
+                    android:hint="Adhaar Card No."
+                    android:layout_below="@id/tv_cAdhar"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    android:maxLength="12"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cPAN"
+                    android:text="PAN Card ID"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_adhaarCard"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_PANCard"
+                    android:hint="PAN Card No."
+                    android:layout_below="@id/tv_cPAN"
+                    android:singleLine="true"
+                    android:drawableLeft="@drawable/ic_call_black"
+                    android:drawablePadding="10dp"
+                    android:maxLength="12"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cJoin"
+                    android:text="Joining On"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_PANCard"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_initDate"
+                    android:hint="Starting From"
+                    android:layout_below="@id/tv_cJoin"
+                    android:singleLine="true"
+                    android:inputType="date"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cLeave"
+                    android:text="Leaving Date"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_initDate"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_endDate"
+                    android:hint="To Date"
+                    android:layout_below="@id/tv_cLeave"
+                    android:singleLine="true"
+                    android:inputType="date"
+                    android:drawableLeft="@drawable/ic_date_init"
+                    android:drawablePadding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_mtrReading"
+                    android:text="Meter Reading"
+                    android:textSize="18dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@id/ed_endDate"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ed_mtrReading"
+                    android:hint="Meter Reading"
+                    android:layout_below="@id/tv_mtrReading"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:drawableLeft="@drawable/ic_meter"
+                    android:drawablePadding="10dp"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/btn_cUpdt"
+                android:layout_weight="1"
+                android:text="UPDATE"
+                android:onClick="custUpdate"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:id="@+id/btn_cDel"
+                android:layout_weight="1"
+                android:text="DELETE"
+                android:onClick="custDel"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
